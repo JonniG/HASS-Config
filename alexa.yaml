@@ -1,0 +1,203 @@
+    intents:
+        LocalWeatherIntent:
+            speech:
+                type: plaintext
+                text: It is currently {{ states.sensor.weather_temperature.state }} Degrees, {{ states.sensor.weather_humidity.state }} percent humidity, and {{ states.sensor.weather_summary.state }}. Today there will be {{ states.sensor.weather_hourly_summary.state }}. and throughout the week {{ states.sensor.weather_daily_summary.state }}.
+
+        TransmissionIntent:
+            speech:
+                type: plaintext
+                text: >
+                    {%- if is_state('sensor.transmission_status', 'Idle') -%}
+                        I'm not downloading right now
+                    {%- else -%}
+                        Downloading at {{ states.sensor.transmission_down_speed.state }} megabytes per second
+                    {% endif %}
+
+        HomeAwayIntent:
+            speech:
+                type: plaintext
+                text: >
+                    {%- if is_state('device_tracker.mariasiphone', 'home') -%}
+                        Maria is home
+                    {% else %}
+                        Maria is away
+                    {% endif %}
+                    {%- if is_state('device_tracker.jonnexus6', 'home') -%}
+                        and Jonathan is home
+                    {% else %}
+                        and Jonathan is away
+                    {% endif %}
+
+        CurtainsIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.curtains
+            speech:
+                type: plaintext
+                text: ok
+
+        KitchenCurtainsIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.kitchencurtains
+            speech:
+                type: plaintext
+                text: ok
+
+        MariaIntent:
+            speech:
+                type: plaintext
+                text: I'm not her mother.
+
+        TVMuteIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.tv_mute
+            speech:
+                type: plaintext
+                text: Toggling mute
+
+        TVPowerIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.tv_power
+            speech:
+                type: plaintext
+                text: Toggling TV
+
+        TVPlexOnIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.tv_plex_on
+            speech:
+                type: plaintext
+                text: Turning on the TV and Plex
+
+        TVPlexOffIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.tv_plex_off
+            speech:
+                type: plaintext
+                text: Turning off the TV and Plex
+
+        PlexOnIntent:
+            action:
+                service: switch.turn_on
+                entity_id: switch.plex_toggle
+            speech:
+                type: plaintext
+                text: Turning Plex on
+
+        PlexOffIntent:
+            action:
+                service: switch.turn_off
+                entity_id: switch.plex_toggle
+            speech:
+                type: plaintext
+                text: Turning Plex off
+
+        PlexPauseIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.plex_play_pause
+            speech:
+                type: plaintext
+                text: Paused
+
+        PlexResumeIntent:
+            action:
+                service: switch.toggle
+                entity_id: switch.plex_play_pause
+            speech:
+                type: plaintext
+                text: Resumed
+
+        PlexVolZero:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume0
+            speech:
+                type: plaintext
+                text: volume set to zero
+
+        PlexVolOne:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume1
+            speech:
+                type: plaintext
+                text: volume set to one
+
+        PlexVolTwo:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume2
+            speech:
+                type: plaintext
+                text: volume set to two
+
+        PlexVolThree:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume3
+            speech:
+                type: plaintext
+                text: volume set to three
+
+        PlexVolFour:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume4
+            speech:
+                type: plaintext
+                text: volume set to four
+
+        PlexVolFive:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume5
+            speech:
+                type: plaintext
+                text: volume set to five
+
+        PlexVolSix:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume6
+            speech:
+                type: plaintext
+                text: volume set to six
+
+        PlexVolSeven:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume7
+            speech:
+                type: plaintext
+                text: volume set to seven
+
+        PlexVolEight:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume8
+            speech:
+                type: plaintext
+                text: volume set to eight
+
+        PlexVolNine:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume9
+            speech:
+                type: plaintext
+                text: volume set to nine
+
+        PlexVolTen:
+            action:
+                service: switch.toggle
+                entity_id: switch.volume10
+            speech:
+                type: plaintext
+                text: volume set to ten

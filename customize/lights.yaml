@@ -1,0 +1,45 @@
+    light.livingroom_1:
+        friendly_name: Globe
+        haaska_hidden: true
+    light.livingroom_2:
+        friendly_name: Ceiling 1
+        haaska_hidden: true
+    light.livingroom_3:
+        friendly_name: Ceiling 2
+        haaska_hidden: true
+    light.livingroom_4:
+        friendly_name: Ceiling 3
+        haaska_hidden: true
+    light.desk_rgb:
+        friendly_name: Desk
+        haaska_hidden: true
+    light.tv_light:
+        friendly_name: TV Backlight
+        haaska_hidden: true
+    light.kitchen_counter:
+        friendly_name: Counter
+        haaska_hidden: true
+    light.bedroom_1:
+        friendly_name: Ceiling 1
+        haaska_hidden: true
+    light.bedroom_2:
+        friendly_name: Ceiling 2
+        haaska_hidden: true
+    light.bedroom_3:
+        friendly_name: Ceiling 3
+        haaska_hidden: true
+    light.hall_1:
+        friendly_name: Ceiling 1
+        haaska_hidden: true
+    light.hall_2:
+        friendly_name: Ceiling 2
+        haaska_hidden: true
+    light.kitchen_1:
+        friendly_name: Ceiling 1
+        haaska_hidden: true
+    light.kitchen_2:
+        friendly_name: Ceiling 2
+        haaska_hidden: true
+    light.kitchen_3:
+        friendly_name: Ceiling 3
+        haaska_hidden: true

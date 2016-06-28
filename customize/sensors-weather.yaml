@@ -1,0 +1,55 @@
+    sensor.weather_cloud_coverage:
+        friendly_name: Cloud Coverage
+        haaska_hidden: true
+
+    sensor.weather_daily_summary:
+        friendly_name: Day
+        haaska_hidden: true
+
+    sensor.weather_hourly_summary:
+        friendly_name: Hour
+        haaska_hidden: true
+
+    sensor.weather_humidity:
+        friendly_name: Humidity
+        haaska_hidden: true
+
+    sensor.weather_minutely_summary:
+        friendly_name: Minute
+        haaska_hidden: true
+
+    sensor.weather_precip:
+        friendly_name: Precip
+        haaska_hidden: true
+
+    sensor.weather_precip_intensity:
+        friendly_name: Precip Intensity
+        haaska_hidden: true
+
+    sensor.weather_precip_probability:
+        friendly_name: Precip Probability
+        haaska_hidden: true
+
+    sensor.weather_pressure:
+        friendly_name: Air Pressure
+        haaska_hidden: true
+
+    sensor.weather_summary:
+        friendly_name: Summary
+        haaska_hidden: true
+
+    sensor.weather_temperature:
+        friendly_name: Temperature
+        haaska_hidden: true
+
+    sensor.weather_wind_bearing:
+        friendly_name: Direction (Degrees)
+        haaska_hidden: true
+
+    sensor.nest_direction:
+        friendly_name: Direction
+        haaska_hidden: true
+
+    sensor.weather_wind_speed:
+        friendly_name: Speed
+        haaska_hidden: true

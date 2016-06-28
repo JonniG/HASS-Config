@@ -1,0 +1,35 @@
+-   platform: rest
+    resource: http://**IP-GOES-HERE**/location?group=HOME&user=JONNI
+    value_template: '{{ value_json.users.jonni[0].location }}'
+    method: GET
+    name: Jonni (FIND)
+    scan_interval: 1
+
+-   platform: rest
+    resource: http://192.0.0.14/api/**YOUR-UNIQUE-KEY-HERE**/sensors/2
+    value_template: '{{ value_json.state.buttonevent }}'
+    method: GET
+    name: Hue Remote Value
+    scan_interval: 1
+
+-   platform: nest
+    monitored_conditions:
+        - 'temperature'
+        - 'target'
+        - 'humidity'
+        - 'mode'
+        - 'wind_direction'
+        - 'co_status'
+        - 'smoke_status'
+
+-   platform: worldclock
+    time_zone: Europe/Amsterdam
+    name: Time Amsterdam
+
+-   platform: worldclock
+    time_zone: America/New_York
+    name: Time East Coast USA
+
+-   platform: worldclock
+    time_zone: America/Los_Angeles
+    name: Time West Coast USA

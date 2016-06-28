@@ -1,0 +1,77 @@
+  - platform: command_line
+    switches:
+        tv_power:
+            oncmd: sh /Users/Plexitosh/Arduino/power.sh
+            offcmd: sh /Users/Plexitosh/Arduino/power.sh
+        tv_mute:
+            oncmd: sh /Users/Plexitosh/Arduino/mute.sh
+            offcmd: sh /Users/Plexitosh/Arduino/mute.sh
+        tv_chan_up:
+            oncmd: sh /Users/Plexitosh/Arduino/channelup.sh
+            offcmd: sh /Users/Plexitosh/Arduino/channelup.sh
+        tv_chan_down:
+            oncmd: sh /Users/Plexitosh/Arduino/channeldown.sh
+            offcmd: sh /Users/Plexitosh/Arduino/channeldown.sh
+        tv_input:
+            oncmd: sh /Users/Plexitosh/Arduino/input.sh
+            offcmd: sh /Users/Plexitosh/Arduino/input.sh
+        tv_vol_up:
+            oncmd: sh /Users/Plexitosh/Arduino/volumeup.sh
+            offcmd: sh /Users/Plexitosh/Arduino/volumeup.sh
+        tv_vol_down:
+            oncmd: sh /Users/Plexitosh/Arduino/volumedown.sh
+            offcmd: sh /Users/Plexitosh/Arduino/volumedown.sh
+        curtains:
+            oncmd: sh /Users/Plexitosh/Arduino/curtains.sh
+            offcmd: sh /Users/Plexitosh/Arduino/curtains.sh
+        plex_toggle:
+            oncmd: sh /Users/Plexitosh/Assistant/plexon.sh
+            offcmd: sh /Users/Plexitosh/Assistant/plexoff.sh
+        tv_plex_on:
+            oncmd: sh /Users/Plexitosh/Assistant/tvplexon.sh
+            offcmd: sh /Users/Plexitosh/Assistant/tvplexon.sh
+        tv_plex_off:
+            oncmd: sh /Users/Plexitosh/Assistant/tvplexoff.sh
+            offcmd: sh /Users/Plexitosh/Assistant/tvplexoff.sh
+        tv_plex_toggle:
+            oncmd: sh /Users/Plexitosh/Assistant/tvplexon.sh
+            offcmd: sh /Users/Plexitosh/Assistant/tvplexoff.sh
+        plex_play_pause:
+            oncmd: osascript /Users/Plexitosh/Assistant/playpause.scpt
+            offcmd: osascript /Users/Plexitosh/Assistant/playpause.scpt
+  - platform: mqtt
+    name: "Desktop"
+    state_topic: "desktop/power"
+    command_topic: "desktop/power"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    retain: true
+  - platform: mqtt
+    name: "KitchenCurtains"
+    state_topic: "ha/kitchen_curtains"
+    command_topic: "ha/kitchen_curtains"
+    qos: 0
+    payload_on: "ON"
+    payload_off: "OFF"
+    optimistic: false
+    retain: true
+  - platform: mqtt
+    name: "Mirror Button 1"
+    state_topic: "mirror/buttons/one/out"
+    command_topic: "mirror/buttons/one/in"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+    retain: true
+  - platform: mqtt
+    name: "Mirror Button 2"
+    state_topic: "mirror/buttons/two/out"
+    command_topic: "mirror/buttons/two/in"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+    retain: true

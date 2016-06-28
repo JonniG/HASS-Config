@@ -1,0 +1,45 @@
+    device_tracker.jonnexus6:
+        friendly_name: Jonni
+        haaska_hidden: true
+
+    device_tracker.androidbe1b189e6e20d1bd:
+        friendly_name: N9 Jonni
+        haaska_hidden: true
+
+    device_tracker.mariasiphone:
+        friendly_name: Maria
+        haaska_hidden: true
+
+    thermostat.nest:
+        haaska_hidden: true
+        friendly_name: Nest
+
+    media_player.living_room_audio:
+        haaska_hidden: true
+
+    media_player.living_room_video:
+        haaska_hidden: true
+
+    media_player.jonathanspro:
+        haaska_hidden: true
+
+    media_player.jonathans_mac_pro:
+        haaska_hidden: true
+
+    media_player.mariasmbp:
+        haaska_hidden: true
+
+    media_player.jonathansmbp:
+        haaska_hidden: true
+
+    media_player.bedroom:
+        haaska_hidden: true
+
+    media_player.marias_iphone:
+        haaska_hidden: true
+
+    media_player.nexus_6:
+        haaska_hidden: true
+
+    camera.weather_map:
+        haaska_hidden: true

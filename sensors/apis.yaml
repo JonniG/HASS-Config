@@ -1,0 +1,16 @@
+-   platform: forecast
+    api_key: **REDACTED**
+    scan_interval: 120
+    monitored_conditions:
+        - summary
+        - precip_type
+        - precip_intensity
+        - precip_probability
+        - temperature
+        - wind_speed
+        - wind_bearing
+        - cloud_cover
+        - humidity
+        - pressure
+        - hourly_summary
+        - daily_summary

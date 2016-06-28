@@ -1,0 +1,85 @@
+homeassistant:
+    name: Home
+    latitude: **REDACTED**
+    longitude: **REDACTED**
+    temperature_unit: C
+    time_zone: Europe/Amsterdam
+    customize: !include_dir_merge_named customize
+
+history:
+
+logbook:
+
+frontend:
+
+sun:
+
+discovery:
+
+updater:
+
+api:
+
+mqtt:
+
+wemo:
+
+recorder:
+    purge_days: 7
+
+nest:
+    username: **REDACTED**
+    password: **REDACTED**
+
+thermostat:
+    platform: nest
+
+#router
+device_tracker:
+-   platform: asuswrt
+    protocol: telnet
+    host: **REDACTED**
+    username: **REDACTED**
+    password: **REDACTED**
+    scan_interval: 60
+    interval_seconds: 30
+    consider_home: 180
+
+# keyboard cmds - not working on macOS for now
+# keyboard:
+
+media_player:
+    platform: plex
+
+notify:
+    platform: pushbullet
+    api_key: **REDACTED**
+    name: jonni
+
+camera:
+    platform: generic
+    still_image_url: http://cdn.knmi.nl/knmi/map/page/weer/actueel-weer/neerslagradar/WWWRADARLGT_loop.gif
+    name: Weather Map
+
+weblink:
+    entities:
+      - name: **REDACTED**
+        url: **REDACTED**
+        icon: mdi:router-wireless
+
+http:
+    api_password: **REDACTED**
+
+sensor: !include_dir_merge_list sensors
+
+switch: !include switches.yaml
+
+group: !include_dir_merge_named groups
+
+scene: !include scenes.yaml
+
+script: !include scripts.yaml
+
+automation: !include_dir_merge_list automations
+
+alexa: !include alexa.yaml

@@ -1,0 +1,32 @@
+    Hall:
+        view: yes
+        entities:
+            - group.HallLight
+            - group.Motion
+            - group.Mirror
+            - group.hallsensors
+
+    HallLight:
+        view: no
+        name: Light
+        icon: mdi:lightbulb
+        entities:
+            - light.hall_1
+            - light.hall_2
+
+    Mirror:
+        view: no
+        name: Mirror Controls
+        entities:
+            - switch.mirror_button_1
+            - switch.mirror_button_2
+
+    HallSensors:
+        view: no
+        name: Sensors
+        entities:
+            - sensor.hall_temperature_sensor
+            - sensor.hall_humidity_sensor
+            - sensor.hall_light_sensor
+            - sensor.hall_motion_sensor
+            - sensor.hall_front_door_sensor

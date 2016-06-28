@@ -1,0 +1,27 @@
+    Kitchen:
+        view: yes
+        entities:
+            - group.KitchenLights
+            - group.KitchenCurtains
+
+    KitchenCurtains:
+        view: no
+        name: Curtains
+        entities:
+            - switch.kitchencurtains
+
+    KitchenLights:
+        view: no
+        name: Light
+        entities:
+            - light.kitchen_counter
+            - group.KitchenCeiling
+
+    KitchenCeiling:
+        view: no
+        name: Ceiling
+        icon: mdi:lightbulb
+        entities:
+            - light.kitchen_1
+            - light.kitchen_2
+            - light.kitchen_3

@@ -1,0 +1,80 @@
+  - alias: "Hue Remote - Button 1 - Short Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '1S'
+    action:
+      - service: switch.turn_on
+        entity_id: switch.chromecast
+
+  - alias: "Hue Remote - Button 2 - Short Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '2S'
+    action:
+      - service: light.turn_on
+        entity_id: group.bedroomceiling
+        data:
+            brightness: 128
+
+  - alias: "Hue Remote - Button 3 - Short Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '3S'
+    action:
+      - service: light.turn_on
+        entity_id: group.bedroomceiling
+        data:
+            brightness: 64
+
+  - alias: "Hue Remote - Button 4 - Short Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '4S'
+    action:
+      - service: light.turn_on
+        entity_id: light.desk_rgb
+        data:
+            brightness: 255
+            effect: colorloop
+
+  - alias: "Hue Remote - Button 1 - Long Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '1L'
+    action:
+      - service: switch.turn_off
+        entity_id: switch.chromecast
+
+  - alias: "Hue Remote - Button 2 - Long Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '2L'
+    action:
+      - service: light.turn_on
+        entity_id: group.bedroomceiling
+        data:
+            brightness: 255
+
+  - alias: "Hue Remote - Button 3 - Long Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '3L'
+    action:
+      - service: light.turn_off
+        entity_id: group.bedroomceiling
+
+  - alias: "Hue Remote - Button 4 - Long Press"
+    trigger:
+      - platform: state
+        entity_id: sensor.hue_remote
+        to: '4L'
+    action:
+      - service: light.turn_off
+        entity_id: light.desk_rgb

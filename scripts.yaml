@@ -1,0 +1,41 @@
+    timed_lamp_day:
+        alias: "Turn on hallway lights and set timer"
+        sequence:
+          - service: script.turn_off
+            data:
+                entity_id: script.timer_off
+          - service: scene.turn_on
+            data:
+                entity_id: scene.hall_on_day
+          - service: script.turn_on
+            data:
+                entity_id: script.timer_off
+    timed_lamp_night:
+        alias: "Turn on hallway lights and set timer"
+        sequence:
+          - service: script.turn_off
+            data:
+                entity_id: script.timer_off
+          - service: scene.turn_on
+            data:
+                entity_id: scene.hall_on_night
+          - service: script.turn_on
+            data:
+                entity_id: script.timer_off
+    timer_off:
+        alias: "Turn off hallway lights after 1 minute"
+        sequence:
+          - delay:
+                minutes: 1
+          - service: scene.turn_on
+            data:
+                entity_id: scene.hall_off
+
+    normalize_nest:
+        alias: "Set nest back to 21 after 1 hour"
+        sequence:
+          - delay:
+                hours: 1
+          - service: scene.turn_on
+            data:
+                entity_id: scene.normalize_nest

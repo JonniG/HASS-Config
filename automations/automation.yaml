@@ -1,0 +1,80 @@
+  - alias: "Day - Hallway motion"
+    trigger:
+      - platform: state
+        entity_id: sensor.hall_motion_sensor
+        to: 'on'
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: above_horizon
+          - condition: state
+            entity_id: switch.mirror_button_1
+            state: 'off'
+          - condition: state
+            entity_id: switch.mirror_button_2
+            state: 'off'
+    action:
+        service: script.turn_on
+        entity_id: script.timed_lamp_day
+
+  - alias: "Night - Hallway motion"
+    trigger:
+      - platform: state
+        entity_id: sensor.hall_motion_sensor
+        to: 'on'
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: sun.sun
+            state: below_horizon
+          - condition: state
+            entity_id: switch.mirror_button_1
+            state: 'off'
+          - condition: state
+            entity_id: switch.mirror_button_2
+            state: 'off'
+    action:
+        service: script.turn_on
+        entity_id: script.timed_lamp_night
+
+  - alias: "Front Door opened"
+    trigger:
+      - platform: state
+        entity_id: sensor.hall_front_door_sensor
+        to: 'open'
+    action:
+      - service: script.turn_on
+        entity_id: script.timed_lamp_day
+
+  - alias: "Home/Away Check"
+    trigger:
+      - platform: time
+        minutes: '/5'
+        seconds: 0
+    condition:
+        condition: and
+        conditions:
+          - condition: state
+            entity_id: device_tracker.jonnexus6
+            state: 'not_home'
+          - condition: state
+            entity_id: device_tracker.mariasiphone
+            state: 'not_home'
+          - condition: state
+            entity_id: group.all_lights
+            state: 'on'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.lights_off
+
+  - alias: Normalize Nest
+    trigger:
+      - platform: numeric_state
+        entity_id: sensor.nest_target
+        above: 21
+    action:
+      - service: script.turn_on
+        entity_id: script.normalize_nest

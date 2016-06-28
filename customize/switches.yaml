@@ -1,0 +1,60 @@
+    switch.curtains:
+        icon: mdi:blinds
+        haaska_name: curtains
+        haaska_hidden: false
+    switch.kitchencurtains:
+        icon: mdi:blinds
+        haaska_hidden: false
+        haaska_name: Kitchen Curtains
+        friendly_name: Curtains
+    switch.tv_power:
+        icon: mdi:television
+        friendly_name: Power
+        haaska_name: tv
+        haaska_hidden: false
+    switch.tv_plex_toggle:
+        haaska_name: Media Center
+        haaska_hidden: false
+    switch.plex_toggle:
+        haaska_name: plex
+        haaska_hidden: false
+    switch.tv_plex_on:
+        haaska_hidden: true
+    switch.tv_plex_off:
+        haaska_hidden: true
+    switch.plex_play_pause:
+        haaska_hidden: true
+    switch.chromecast:
+        icon: mdi:cast
+        friendly_name: Chromecast
+        haaska_hidden: true
+    switch.tv_mute:
+        friendly_name: Mute
+        icon: mdi:volume-off
+        haaska_hidden: true
+    switch.tv_chan_up:
+        friendly_name: Channel up
+        icon: mdi:arrow-up
+        haaska_hidden: true
+    switch.tv_chan_down:
+        friendly_name: Channel down
+        icon: mdi:arrow-down
+        haaska_hidden: true
+    switch.tv_input:
+        friendly_name: Source
+        icon: mdi:exit-to-app
+        haaska_hidden: true
+    switch.tv_vol_up:
+        friendly_name: Volume up
+        icon: mdi:volume-high
+        haaska_hidden: true
+    switch.tv_vol_down:
+        friendly_name: Volume down
+        icon: mdi:volume-low
+        haaska_hidden: true
+    switch.mirror_button_1:
+        icon: mdi:checkbox-blank-circle
+        haaska_hidden: true
+    switch.mirror_button_2:
+        icon: mdi:checkbox-blank-circle
+        haaska_hidden: true

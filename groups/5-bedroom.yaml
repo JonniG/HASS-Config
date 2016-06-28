@@ -1,0 +1,44 @@
+    Bedroom:
+        view: yes
+        entities:
+            - group.BedroomLights
+            - group.BedroomCast
+            - group.Switches
+            - group.HueRemote
+
+    BedroomCast:
+        view: no
+        name: Media Players
+        entities:
+            - media_player.bedroom
+            - media_player.jonathandesktop
+            - media_player.jonathansmacbookpro
+
+    Switches:
+        view: no
+        name: Power Switches
+        entities:
+            - switch.Desktop
+            - switch.chromecast
+
+    BedroomLights:
+        view: no
+        name: Light
+        entities:
+            - group.BedroomCeiling
+            - light.desk_rgb
+
+    BedroomCeiling:
+        view: no
+        name: Ceiling
+        icon: mdi:lightbulb
+        entities:
+            - light.bedroom_1
+            - light.bedroom_2
+            - light.bedroom_3
+
+    HueRemote:
+        view: no
+        name: Remote
+        entities:
+            - sensor.hue_remote

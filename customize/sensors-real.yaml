@@ -1,0 +1,58 @@
+    sensor.nest_target:
+        haaska_hidden: true
+        friendly_name: Target Temp
+
+    sensor.nest_temperature:
+        haaska_hidden: true
+        friendly_name: Current Temp
+
+    sensor.nest_humidity:
+        haaska_hidden: true
+        friendly_name: Humidity
+        icon: mdi:nest-thermostat
+
+    sensor.living_room_co_status:
+        friendly_name: CO Detector
+        haaska_hidden: true
+        icon: mdi:nest-protect
+
+    sensor.living_room_smoke_status:
+        friendly_name: Smoke Detector
+        haaska_hidden: true
+        icon: mdi:nest-protect
+
+    sensor.hall_front_door_sensor:
+        icon: mdi:glassdoor
+        haaska_hidden: true
+        friendly_name: Front Door
+
+    sensor.hall_humidity_sensor:
+        icon: mdi:water-percent
+        haaska_hidden: true
+        friendly_name: Humidity
+
+    sensor.hall_light_sensor:
+        icon: mdi:weather-sunny
+        haaska_hidden: true
+        friendly_name: Light
+
+    sensor.hall_motion_sensor:
+        friendly_name: Motion
+        haaska_hidden: true
+
+    sensor.hall_temperature_sensor:
+        friendly_name: Temperature
+        haaska_hidden: true
+
+    binary_sensor.wemo_motion:
+        haaska_hidden: true
+        friendly_name: Motion
+        icon: mdi:eye
+
+    sensor.hue_remote:
+        haaska_hidden: true
+        icon: mdi:remote
+
+    sensor.hue_remote_value:
+        haaska_hidden: true
+        hidden: true

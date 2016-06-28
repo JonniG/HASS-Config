@@ -1,0 +1,57 @@
+    Livingroom:
+        view: yes
+        entities:
+            - group.LivingroomLights
+            - group.Curtains
+            - group.LivingroomMedia
+            - group.TVControl
+            - group.LivingroomSensors
+
+    Curtains:
+        view: no
+        name: Curtains
+        entities:
+            - switch.curtains
+
+    LivingroomLights:
+        view: no
+        name: Light
+        entities:
+            - group.LivingroomCeiling
+            - light.livingroom_1
+            - light.tv_light
+
+    LivingroomMedia:
+        view: no
+        name: Media Players
+        entities:
+            - media_player.jonathans_mac_pro
+            - media_player.living_room_audio
+            - media_player.living_room_video
+
+    LivingroomCeiling:
+        view: no
+        name: Ceiling
+        icon: mdi:lightbulb
+        entities:
+            - light.livingroom_2
+            - light.livingroom_3
+            - light.livingroom_4
+
+    LivingroomSensors:
+        view: no
+        name: Sensors
+        entities:
+            - binary_sensor.wemo_motion
+
+    TVControl:
+        view: no
+        name: TV Control
+        entities:
+            - switch.tv_power
+            - switch.tv_input
+            - switch.tv_chan_up
+            - switch.tv_chan_down
+            - switch.tv_vol_up
+            - switch.tv_vol_down
+            - switch.tv_mute

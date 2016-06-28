@@ -1,0 +1,26 @@
+-   platform: mqtt
+    name: Hall Light Sensor
+    state_topic: "/sensorbox/one/light"
+    qos: 0
+
+-   platform: mqtt
+    name: Hall Motion Sensor
+    state_topic: "/sensorbox/one/pir"
+    qos: 0
+
+-   platform: mqtt
+    name: Hall Temperature Sensor
+    state_topic: "/sensorbox/one/temp"
+    unit_of_measurement: "°C"
+    qos: 0
+
+-   platform: mqtt
+    name: Hall Humidity Sensor
+    state_topic: "/sensorbox/one/humidity"
+    unit_of_measurement: "%"
+    qos: 0
+
+-   platform: mqtt
+    name: Hall Front Door Sensor
+    state_topic: "/sensorbox/one/door"
+    qos: 0

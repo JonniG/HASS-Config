@@ -1,0 +1,108 @@
+    sensor.desktopjonni:
+        friendly_name: Desktop Jonni
+        haaska_hidden: true
+        icon: mdi:desktop-tower
+
+    sensor.mbpjonni:
+        friendly_name: MBP Jonni
+        haaska_hidden: true
+        icon: mdi:laptop-mac
+
+    sensor.mbpmaria:
+        friendly_name: MBP Maria
+        haaska_hidden: true
+        icon: mdi:laptop-mac
+
+    sensor.walltablet:
+        friendly_name: Wall Tablet
+        haaska_hidden: true
+        icon: mdi:tablet-android
+
+    sensor.server:
+        friendly_name: Server
+        haaska_hidden: true
+        icon: mdi:server-network
+
+    sensor.huebridge:
+        friendly_name: Hue Bridge
+        haaska_hidden: true
+        icon: mdi:lightbulb
+
+    sensor.jonni_find:
+        icon: mdi:crosshairs-gps
+        friendly_name: (Find) Jonni
+        haaska_hidden: true
+
+    sensor.transmission_down_speed:
+        icon: mdi:download
+        friendly_name: Download
+        haaska_hidden: true
+
+    sensor.transmission_status:
+        icon: mdi:folder-download
+        friendly_name: Status
+        haaska_hidden: true
+
+    sensor.transmission_up_speed:
+        icon: mdi:upload
+        friendly_name: Upload
+        haaska_hidden: true
+
+    sensor.plex_server:
+        icon: mdi:chevron-right
+        haaska_hidden: true
+
+    sensor.time_west_coast_usa:
+        haaska_hidden: true
+        friendly_name: LA
+
+    sensor.time_east_coast_usa:
+        haaska_hidden: true
+        friendly_name: NYC
+
+    sensor.time_amsterdam:
+        haaska_hidden: true
+        friendly_name: AMS
+
+    sensor.cpu_use:
+        haaska_hidden: true
+        friendly_name: CPU Use
+
+    sensor.ram_free:
+        haaska_hidden: true
+        friendly_name: RAM Free
+
+    sensor.ram_use:
+        haaska_hidden: true
+        friendly_name: RAM Used
+
+    sensor.disk_free_volumesstorage_1x:
+        haaska_hidden: true
+        friendly_name: HDD 1 - Free
+
+    sensor.disk_use_volumesstorage_1x:
+        haaska_hidden: true
+        friendly_name: HDD 1 - Used
+
+    sensor.disk_free_volumesstorage_2x:
+        haaska_hidden: true
+        friendly_name: HDD 2 - Free
+
+    sensor.disk_use_volumesstorage_2x:
+        haaska_hidden: true
+        friendly_name: HDD 2 - Used
+
+    sensor.speedtest_download:
+        haaska_hidden: true
+        friendly_name: Download
+        icon: mdi:download
+
+    sensor.speedtest_ping:
+        haaska_hidden: true
+        friendly_name: Ping
+        icon: mdi:access-point-network
+
+    sensor.speedtest_upload:
+        haaska_hidden: true
+        friendly_name: Upload
+        icon: mdi:upload

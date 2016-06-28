@@ -1,0 +1,37 @@
+    default_view:
+        view: yes
+        entities:
+            - group.NestTherm
+            - group.NestProtect
+            - group.Tracking
+            - group.worldclock
+
+    NestTherm:
+        view: no
+        name: Thermostat
+        entities:
+            - thermostat.nest
+            - sensor.nest_humidity
+
+    NestProtect:
+        view: no
+        name: Protect
+        entities:
+            - sensor.living_room_co_status
+            - sensor.living_room_smoke_status
+
+    Tracking:
+        view: no
+        name: Tracking
+        entities:
+            - device_tracker.jonnexus6
+            - device_tracker.mariasiphone
+            - sensor.jonni_find
+
+    WorldClock:
+        view: no
+        name: World Clock
+        entities:
+            - sensor.time_west_coast_usa
+            - sensor.time_east_coast_usa
+            - sensor.time_amsterdam

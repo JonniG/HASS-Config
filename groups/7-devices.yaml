@@ -1,0 +1,81 @@
+    Devices:
+        view: yes
+        name: Devices
+        entities:
+            - group.jonniphone
+            - group.jonniwatch
+            - group.server
+            - group.transmission
+            - group.WebLinks
+            - group.network
+            - group.plex
+            - sensor.desktopjonni
+            - sensor.mbpjonni
+            - sensor.jonnexus9
+            - sensor.server
+            - sensor.walltablet
+            - sensor.mbpmaria
+            - sensor.huebridge
+
+    Plex:
+        view: no
+        name: Plex
+        entities:
+            - sensor.plex_server
+
+    Network:
+        view: no
+        name: Connection Info
+        entities:
+            - sensor.speedtest_ping
+            - sensor.speedtest_download
+            - sensor.speedtest_upload
+
+    Server:
+        view: no
+        name: Server
+        entities:
+            - sensor.cpu_use
+            - sensor.ram_free
+            - sensor.ram_use
+            - sensor.disk_free_volumesstorage_1x
+            - sensor.disk_use_volumesstorage_1x
+            - sensor.disk_free_volumesstorage_2x
+            - sensor.disk_use_volumesstorage_2x
+
+    Transmission:
+        view: no
+        name: Transmission
+        entities:
+            - sensor.transmission_status
+            - sensor.transmission_down_speed
+            - sensor.transmission_up_speed
+
+    WebLinks:
+        view: no
+        name: Server Interfaces
+        entities:
+            - weblink.couchpotato
+            - weblink.glances
+            - weblink.plex
+            - weblink.plex_requests
+            - weblink.plexpy
+            - weblink.router
+            - weblink.sonarr
+            - weblink.transmission
+
+    JonniPhone:
+        view: no
+        name: Nexus 6
+        entities:
+            - sensor.phonebatt
+            - sensor.phonecharging
+            - sensor.phonecon
+            - sensor.phonewifiinfo
+
+    JonniWatch:
+        view: no
+        name: LG Urbane
+        entities:
+            - sensor.phonewatchbatt
+            - sensor.phonewatchcharging

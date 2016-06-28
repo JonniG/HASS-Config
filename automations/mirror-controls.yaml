@@ -1,0 +1,43 @@
+  - alias: "Mirror Button 1 on"
+    trigger:
+      - platform: state
+        entity_id: switch.mirror_button_1
+        from: 'off'
+        to: 'on'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.hall_on_day
+      - service: script.turn_off
+        entity_id: script.timer_off
+
+  - alias: "Mirror Button 1 off"
+    trigger:
+      - platform: state
+        entity_id: switch.mirror_button_1
+        from: 'on'
+        to: 'off'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.hall_off
+
+  - alias: "Mirror Button 2 on"
+    trigger:
+      - platform: state
+        entity_id: switch.mirror_button_2
+        from: 'off'
+        to: 'on'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.hall_on_max
+      - service: script.turn_off
+        entity_id: script.timer_off
+
+  - alias: "Mirror Button 2 off"
+    trigger:
+      - platform: state
+        entity_id: switch.mirror_button_2
+        from: 'on'
+        to: 'off'
+    action:
+      - service: scene.turn_on
+        entity_id: scene.hall_off

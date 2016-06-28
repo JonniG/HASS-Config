@@ -1,0 +1,20 @@
+    scene.hall_off:
+        haaska_hidden: true
+    scene.hall_on_day:
+        haaska_hidden: true
+    scene.hall_on_max:
+        haaska_hidden: true
+    scene.hall_on_night:
+        haaska_hidden: true
+    scene.lights_off:
+        haaska_hidden: true
+    scene.chromecast_backlight_off:
+        haaska_hidden: true
+    scene.chromecast_backlight_on:
+        haaska_hidden: true
+    scene.plex_backlight_off:
+        haaska_hidden: true
+    scene.plex_backlight_on:
+        haaska_hidden: true
+    scene.normalize_nest:
+        haaska_hidden: true

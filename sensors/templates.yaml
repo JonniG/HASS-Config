@@ -1,0 +1,85 @@
+-   platform: template
+    sensors:
+        hue_remote:
+            friendly_name: 'Hue Remote'
+            value_template: >-
+                {%- if is_state("sensor.hue_remote_value", "1002") %}
+                    1S
+                {%- elif is_state("sensor.hue_remote_value", "2002") %}
+                    2S
+                {%- elif is_state("sensor.hue_remote_value", "3002") %}
+                    3S
+                {%- elif is_state("sensor.hue_remote_value", "4002") %}
+                    4S
+                {%- elif is_state("sensor.hue_remote_value", "1003") %}
+                    1L
+                {%- elif is_state("sensor.hue_remote_value", "2003") %}
+                    2L
+                {%- elif is_state("sensor.hue_remote_value", "3003") %}
+                    3L
+                {%- elif is_state("sensor.hue_remote_value", "4003") %}
+                    4L
+                {%- endif %}
+
+        desktopjonni:
+            friendly_name: 'Desktop Jonni'
+            value_template: >-
+                {%- if is_state("device_tracker.jonathandesktop", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        mbpjonni:
+            friendly_name: 'MBP Jonni'
+            value_template: >-
+                {%- if is_state("device_tracker.jonathansmbp", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        server:
+            friendly_name: 'Server'
+            value_template: >-
+                {%- if is_state("device_tracker.jonathanspro", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        walltablet:
+            friendly_name: 'Wall Tablet'
+            value_template: >-
+                {%- if is_state("device_tracker.jonnexus7", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        mbpmaria:
+            friendly_name: 'MBP Maria'
+            value_template: >-
+                {%- if is_state("device_tracker.mariasmbp", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        huebridge:
+            friendly_name: 'Hue Bridge'
+            value_template: >-
+                {%- if is_state("device_tracker.philipshue", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}
+
+        jonnexus9:
+            friendly_name: 'N9 Jonni'
+            value_template: >-
+                {%- if is_state("device_tracker.androidbe1b189e6e20d1bd", "home") %}
+                    online
+                {% else %}
+                    offline
+                {%- endif %}

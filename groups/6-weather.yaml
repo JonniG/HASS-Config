@@ -1,0 +1,54 @@
+    Weather:
+        view: yes
+        name: Weather
+        entities:
+            - group.weathersun
+            - group.weathertemp
+            - group.weatherwind
+            - group.weatherprecip
+            - group.weatherreport
+            - group.weathermap
+
+    WeatherSun:
+        view: no
+        name: Sun / Clouds
+        entities:
+            - sun.sun
+            - sensor.weather_summary
+
+    WeatherTemp:
+        view: no
+        name: Temperature
+        entities:
+            - sensor.weather_temperature
+            - sensor.weather_humidity
+
+    WeatherWind:
+        view: no
+        name: Wind
+        entities:
+            - sensor.weather_wind_bearing
+            - sensor.nest_direction
+            - sensor.weather_wind_speed
+            - sensor.weather_pressure
+
+    WeatherPrecip:
+        view: no
+        name: Rain
+        entities:
+            - sensor.weather_precip
+            - sensor.weather_precip_intensity
+            - sensor.weather_precip_probability
+
+    WeatherReport:
+        view: no
+        name: Weather Report
+        entities:
+            - sensor.weather_daily_summary
+            - sensor.weather_hourly_summary
+
+    WeatherMap:
+        view: no
+        name: Satellite View
+        entities:
+            - camera.weather_map

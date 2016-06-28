@@ -1,0 +1,37 @@
+-   platform: transmission
+    host: **REDACTED**
+    port: **REDACTED**
+    name: Transmission
+    username: **REDACTED**
+    password: **REDACTED**
+    monitored_variables:
+        - 'current_status'
+        - 'download_speed'
+        - 'upload_speed'
+
+-   platform: systemmonitor
+    resources:
+      - type: disk_use
+        arg: /Volumes/Storage 1x
+      - type: disk_free
+        arg: /Volumes/Storage 1x
+      - type: disk_use
+        arg: /Volumes/Storage 2x
+      - type: disk_free
+        arg: /Volumes/Storage 2x
+      - type: memory_use
+      - type: memory_free
+      - type: processor_use
+
+-   platform: speedtest
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+-   platform: plex
+    name: Plex Server
+    host: **REDACTED**
+    port: **REDACTED**
+    username: **REDACTED**
+    password: **REDACTED**
