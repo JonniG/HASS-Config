@@ -44,10 +44,23 @@
         friendly_name: Temperature
         haaska_hidden: true
 
-    binary_sensor.wemo_motion:
+    sensor.maria_humidity_sensor:
+        icon: mdi:water-percent
         haaska_hidden: true
+        friendly_name: Humidity
+
+    sensor.maria_light_sensor:
+        icon: mdi:weather-sunny
+        haaska_hidden: true
+        friendly_name: Light
+
+    sensor.maria_motion_sensor:
         friendly_name: Motion
-        icon: mdi:eye
+        haaska_hidden: true
+
+    sensor.maria_temperature_sensor:
+        friendly_name: Temperature
+        haaska_hidden: true
 
     sensor.hue_remote:
         haaska_hidden: true

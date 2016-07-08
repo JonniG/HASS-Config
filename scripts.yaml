@@ -36,6 +36,7 @@
         sequence:
           - delay:
                 hours: 1
-          - service: scene.turn_on
+          - service: thermostat.set_temperature
             data:
-                entity_id: scene.normalize_nest
+                entity_id: thermostat.nest
+                temperature: 21

@@ -1,0 +1,27 @@
+  - name: plex_backlight_on
+    entities:
+        light.tv_light:
+            state: On
+            transition: 2
+            color_name: blue
+            brightness: 255
+
+  - name: chromecast_backlight_on
+    entities:
+        light.tv_light:
+            state: On
+            transition: 2
+            color_name: red
+            brightness: 255
+
+  - name: plex_backlight_off
+    entities:
+        light.tv_light:
+            state: Off
+            transition: 2
+
+  - name: chromecast_backlight_off
+    entities:
+        light.tv_light:
+            state: Off
+            transition: 2

@@ -1,0 +1,21 @@
+    Maria:
+        view: yes
+        entities:
+            - group.mariacast
+            - group.MariaSensors
+
+    MariaCast:
+        view: no
+        name: Media Players
+        entities:
+            - media_player.marias_macbook_pro
+
+    MariaSensors:
+        view: no
+        name: Sensors
+        entities:
+            - sensor.maria_temperature_sensor
+            - sensor.maria_humidity_sensor
+            - sensor.maria_light_sensor
+            - sensor.maria_motion_sensor
+            - switch.maria_button

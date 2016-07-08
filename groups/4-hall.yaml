@@ -2,7 +2,6 @@
         view: yes
         entities:
             - group.HallLight
-            - group.Motion
             - group.Mirror
             - group.hallsensors
 

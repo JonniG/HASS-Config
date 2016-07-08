@@ -1,12 +1,12 @@
 -   platform: rest
-    resource: http://**IP-GOES-HERE**/location?group=HOME&user=JONNI
+    resource: http://**REDACTED**/location?group=HOME&user=JONNI
     value_template: '{{ value_json.users.jonni[0].location }}'
     method: GET
     name: Jonni (FIND)
     scan_interval: 1
 
 -   platform: rest
-    resource: http://192.0.0.14/api/**YOUR-UNIQUE-KEY-HERE**/sensors/2
+    resource: http://192.0.0.14/api/**REDACTED**/sensors/2
     value_template: '{{ value_json.state.buttonevent }}'
     method: GET
     name: Hue Remote Value

@@ -24,3 +24,25 @@
     name: Hall Front Door Sensor
     state_topic: "/sensorbox/one/door"
     qos: 0
+
+-   platform: mqtt
+    name: Maria Light Sensor
+    state_topic: "/sensorbox/maria/light"
+    qos: 0
+
+-   platform: mqtt
+    name: Maria Motion Sensor
+    state_topic: "/sensorbox/maria/pir"
+    qos: 0
+
+-   platform: mqtt
+    name: Maria Temperature Sensor
+    state_topic: "/sensorbox/maria/temp"
+    unit_of_measurement: "°C"
+    qos: 0
+
+-   platform: mqtt
+    name: Maria Humidity Sensor
+    state_topic: "/sensorbox/maria/humidity"
+    unit_of_measurement: "%"
+    qos: 0

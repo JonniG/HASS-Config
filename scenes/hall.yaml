@@ -1,0 +1,41 @@
+  - name: Hall On Max
+    entities:
+        light.hall_1:
+            state: On
+            transition: 1
+            brightness: 255
+        light.hall_2:
+            state: On
+            transition: 1
+            brightness: 255
+
+  - name: Hall On Day
+    entities:
+        light.hall_1:
+            state: On
+            transition: 1
+            brightness: 150
+        light.hall_2:
+            state: On
+            transition: 1
+            brightness: 150
+
+  - name: Hall On Night
+    entities:
+        light.hall_1:
+            state: On
+            transition: 1
+            brightness: 90
+        light.hall_2:
+            state: On
+            transition: 1
+            brightness: 90
+
+  - name: Hall Off
+    entities:
+        light.hall_1:
+            state: Off
+            transition: 1
+        light.hall_2:
+            state: Off
+            transition: 1

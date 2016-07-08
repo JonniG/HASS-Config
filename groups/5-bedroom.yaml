@@ -12,7 +12,7 @@
         entities:
             - media_player.bedroom
             - media_player.jonathandesktop
-            - media_player.jonathansmacbookpro
+            - media_player.jonathans_macbook_pro
 
     Switches:
         view: no
@@ -20,6 +20,7 @@
         entities:
             - switch.Desktop
             - switch.chromecast
+            - switch.chromecast_relay
 
     BedroomLights:
         view: no

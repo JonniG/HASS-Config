@@ -47,6 +47,8 @@
         entity_id: sensor.hue_remote
         to: '1L'
     action:
+      - service: media_player.turn_off
+        entity_id: media_player.bedroom
       - service: switch.turn_off
         entity_id: switch.chromecast
 

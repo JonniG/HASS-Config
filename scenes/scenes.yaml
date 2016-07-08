@@ -1,0 +1,32 @@
+  - name: Lights Off
+    entities:
+        light.bedroom_1:
+            state: Off
+        light.bedroom_2:
+            state: Off
+        light.bedroom_3:
+            state: Off
+        light.desk_rgb:
+            state: Off
+        light.desk_rgb2:
+            state: Off
+        light.hall_1:
+            state: Off
+        light.hall_2:
+            state: Off
+        light.livingroom_1:
+            state: Off
+        light.livingroom_2:
+            state: Off
+        light.livingroom_3:
+            state: Off
+        light.livingroom_4:
+            state: Off
+        light.kitchen_1:
+            state: Off
+        light.kitchen_2:
+            state: Off
+        light.kitchen_3:
+            state: Off
+        light.kitchen_counter:
+            state: Off

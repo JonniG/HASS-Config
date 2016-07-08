@@ -25,7 +25,6 @@
     switch.plex_play_pause:
         haaska_hidden: true
     switch.chromecast:
-        icon: mdi:cast
         friendly_name: Chromecast
         haaska_hidden: true
     switch.tv_mute:
@@ -57,4 +56,8 @@
         haaska_hidden: true
     switch.mirror_button_2:
         icon: mdi:checkbox-blank-circle
+        haaska_hidden: true
+    switch.maria_button:
+        icon: mdi:checkbox-blank-circle
+        friendly_name: Button
         haaska_hidden: true

@@ -1,7 +1,8 @@
 homeassistant:
     name: Home
-    latitude: **REDACTED**
-    longitude: **REDACTED**
+    latitude: 52.08151370769672
+    longitude: 5.118844863027334
+    elevation: 7
     temperature_unit: C
     time_zone: Europe/Amsterdam
     customize: !include_dir_merge_named customize
@@ -22,14 +23,12 @@ api:
 
 mqtt:
 
-wemo:
-
 recorder:
     purge_days: 7
 
 nest:
-    username: **REDACTED**
-    password: **REDACTED**
+    username: !secret nest_usr
+    password: !secret nest_pass
 
 thermostat:
     platform: nest
@@ -38,9 +37,9 @@ thermostat:
 device_tracker:
 -   platform: asuswrt
     protocol: telnet
-    host: **REDACTED**
-    username: **REDACTED**
-    password: **REDACTED**
+    host: 192.0.0.1
+    username: !secret asus_usr
+    password: !secret asus_pass
     scan_interval: 60
     interval_seconds: 30
     consider_home: 180
@@ -53,7 +52,7 @@ media_player:
 
 notify:
     platform: pushbullet
-    api_key: **REDACTED**
+    api_key: !secret push_api
     name: jonni
 
 camera:
@@ -63,12 +62,33 @@ camera:
 
 weblink:
     entities:
-      - name: **REDACTED**
-        url: **REDACTED**
+      - name: Router
+        url: !secret router_url
         icon: mdi:router-wireless
+      - name: Plex
+        url: !secret plex_url
+        icon: mdi:chevron-right
+      - name: Transmission
+        url: !secret trans_url
+        icon: mdi:cloud-download
+      - name: Sonarr
+        url: !secret sonarr_url
+        icon: mdi:calendar
+      - name: Couchpotato
+        url: !secret couch_url
+        icon: mdi:movie
+      - name: Plex Requests
+        url: !secret requests_url
+        icon: mdi:comment-question-outline
+      - name: PlexPy
+        url: !secret plexpy_url
+        icon: mdi:chart-bar
+      - name: Glances
+        url: !secret glances_url
+        icon: mdi:server
 
 http:
-    api_password: **REDACTED**
+    api_password: !secret http_pass
 
 sensor: !include_dir_merge_list sensors
 
@@ -76,7 +96,7 @@ switch: !include switches.yaml
 
 group: !include_dir_merge_named groups
 
-scene: !include scenes.yaml
+scene: !include_dir_merge_list scenes
 
 script: !include scripts.yaml
 

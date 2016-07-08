@@ -75,3 +75,21 @@
     payload_off: "0"
     optimistic: false
     retain: true
+  - platform: mqtt
+    name: "Chromecast"
+    state_topic: "chromecast/relay/out"
+    command_topic: "chromecast/relay/in"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+    retain: true
+  - platform: mqtt
+    name: "Maria Button"
+    state_topic: "/sensorbox/maria/button/out"
+    command_topic: "/sensorbox/maria/button/in"
+    qos: 0
+    payload_on: "1"
+    payload_off: "0"
+    optimistic: false
+    retain: true
